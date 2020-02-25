@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.hello {
+			border: 2px solid grey;
+			transition: all 1s;
+			padding: 5px;
+		}
+		.hello-active {
+			border: 2px solid red;
+			background: grey;
+			padding: 30px;
+		}
+		.hello:hover {
+			background: green;
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="hello">
+		Ola!
+	</div>
+
+	<script type="text/javascript">
+		const node = document.querySelector('.hello');
+		node.addEventListener('click', function(){
+			this.classList.add('hello-active');
+		});
+		node.addEventListener('transitionend', function(){
+			this.classList.remove('hello-active');
+		});
+	</script>
+</body>
+</html>
