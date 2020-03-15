@@ -21,11 +21,11 @@
                     <ul>
                         <li>
                             <i class="fas fa-home"></i>
-                            <a href="#">Dashboard</a>
+                            <a href="dashboard.html">Dashboard</a>
                         </li>
                         <li>
                             <i class="fas fa-user"></i>
-                            <a href="#">Perfil</a>
+                            <a href="perfil.html">Perfil</a>
                         </li>
                         <li>
                             <i class="fas fa-balance-scale-right"></i>
@@ -33,19 +33,19 @@
                         </li>
                         <li>
                             <i class="fas fa-heartbeat"></i>
-                            <a href="#">Gerenciar pressão arterial</a>
+                            <a href="gerenciarPressao.html">Gerenciar pressão arterial</a>
                         </li>
                         <li>
                             <i class="fas fa-skating"></i>
-                            <a href="#">Gerenciar atividades físicas</a>
+                            <a href="gerenciarAtividades.html">Gerenciar atividades físicas</a>
                         </li>
                         <li>
                             <i class="fas fa-utensils"></i>
-                            <a href="#">Gerenciar alimentos</a>
+                            <a href="gerenciarAlimentos.html">Gerenciar alimentos</a>
                         </li>
                         <li>
                             <i class="fas fa-calculator"></i>
-                            <a href="#">Calcular IMC</a>
+                            <a href="calcularIMC.html">Calcular IMC</a>
                         </li>
                     </ul>
                 </div>
@@ -56,11 +56,27 @@
                     <a href="../index.html"> <i class="fas fa-sign-out-alt"></i> Logout</a>
                 </header>
                 <div class="main-content">
-                   <p>dashboard</p>
+                    <div class="main-content-title">
+                        <h2>Gerenciar pressão arterial</h2>
+                    </div>
+                   <div class="panel-row">
+                       <button class="panel panel-50" a-view="cadastrarPressao" onclick="fetchContent(this)" a-folder="pressao">
+                            <i class="fas fa-plus"></i>
+                            Cadastrar Pressao
+                       </button>
+                       <button class="panel panel-50" a-view="visualizarPressao" onclick="fetchContent(this)" a-folder="pressao">
+                            <i class="fas fa-table"></i>
+                            Visualizar Pressao
+                       </button>
+                   </div>
+                   <div class="content" id="ajax-content">
+
+                   </div>
                 </div>
             </main>
         </div>
         <script src="../plugins/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
         <script src="../plugins/fontawesome/js/all.min.js"></script>
+        <script src="../js/ajax.js"></script>
     </body>
 </html>
